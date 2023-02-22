@@ -482,7 +482,7 @@ img {
 }
 
 .customers-item {
-  flex-basis: calc((100% - 16px) / 2);
+  width: 190px;
   height: 88px;
 }
 
@@ -511,10 +511,11 @@ img {
 
 @media screen and (min-width: 768px) {
   .customers-list {
+    justify-content: center;
     column-gap: 24px;
   }
   .customers-item {
-    flex-basis: calc((100% - 48px) / 3);
+    width: 168px;
   }
 }
 
@@ -604,27 +605,30 @@ img {
 }
 /* ----------------------------FOOTER---------------------------- */
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: var(--footer-bg-color);
 }
 
 .footer-div {
   display: flex;
-  align-items: start;
+  flex-direction: column;
+  gap: 72px;
+  align-items: center;
 }
 
 .footer-wrap {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
 
 .footer-logo {
-  width: 115px;
+  display: block;
+  font-weight: 800;
+  width: 117px;
   font-size: 18px;
   line-height: 1.17;
-  display: block;
+  letter-spacing: 0.03;
   color: var(--primary-brand-color);
 }
 
@@ -633,7 +637,7 @@ img {
 }
 
 .footer-text {
-  width: 264px;
+  width: 268px;
   letter-spacing: 0.02em;
   color: var(--footer-text);
 }
@@ -641,7 +645,7 @@ img {
 .footer-soc {
   display: flex;
   flex-direction: column;
-  margin-left: 120px;
+  align-items: center;
   gap: 16px;
 }
 
@@ -681,9 +685,8 @@ img {
 .footer-subscribe {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
-  width: 453px;
-  margin-left: auto;
 }
 
 .footer-subscribe-title {
@@ -694,13 +697,15 @@ img {
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
   height: 40px;
 }
 
 .footer-input {
-  height: 100%;
-  width: 264px;
+  height: 40px;
+  width: 394px;
   padding: 8px 16px;
   font-size: 12px;
   line-height: 2;
@@ -729,6 +734,7 @@ img {
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 165px;
   padding: 8px 24px;
   color: var(--white);
   background: var(--primary-brand-color);
@@ -741,6 +747,62 @@ img {
 .subscribe-btn:is(:hover, :focus) {
   background-color: var(--hover-color);
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-left: 93px;
+  }
+
+  .footer-div {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 24px;
+    row-gap: 0;
+  }
+
+  .footer-wrap {
+    align-items: flex-start;
+    margin-bottom: 72px;
+  }
+
+  .footer-soc {
+    align-items: flex-start;
+  }
+
+  .footer-subscribe {
+    align-items: flex-start;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-left: 0;
+  }
+
+  .footer-div {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .footer-wrap {
+    margin-bottom: 0;
+  }
+
+  .footer-soc {
+    margin-left: 80px;
+    margin-right: 120px;
+  }
+}
+
 /* ----------------------------MODAL---------------------------- */
 .backdrop {
   position: fixed;
