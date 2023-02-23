@@ -25,36 +25,87 @@
     <!-- Header -->
     <header class="header">
       <div class="container nav">
-        <nav class="header-nav">
-          <a href="./index.html" class="header-logo logo">
-            <span class="accent">Web</span>Studio
-          </a>
-          <ul class="header-list list">
-            <li class="header-item">
-              <a href="./index.html" class="header-link current link">Studio</a>
-            </li>
-            <li class="header-item">
-              <a href="./portfolio.html" class="header-link link">Portfolio</a>
-            </li>
-            <li class="header-item">
-              <a href="" class="header-link link">Contacts</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <ul class="header-contact list">
-            <li class="header-item">
-              <a href="mailto:info@devstudio.com" class="header-commerce link">
-                info@devstudio.com
+        <a href="./index.html" class="header-logo logo">
+          <span class="accent">Web</span>Studio
+        </a>
+        <button
+          type="button"
+          class="js-open-menu is-open"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="header-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu-hamburger"></use>
+          </svg>
+        </button>
+        <div class="js-menu-container">
+          <button class="close-btn js-close-menu">
+            <svg class="icon-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close-btn"></use>
+            </svg>
+          </button>
+          <nav class="header-nav">
+            <ul class="header-list list">
+              <li class="header-item">
+                <a href="./index.html" class="header-link current link"
+                  >Studio</a
+                >
+              </li>
+              <li class="header-item">
+                <a href="./portfolio.html" class="header-link link"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="header-item">
+                <a href="" class="header-link link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="header-address">
+            <ul class="header-contact list">
+              <li class="header-item">
+                <a href="tel:+110001111111" class="header-tel link">
+                  +11 (000) 111-11-11
+                </a>
+              </li>
+              <li class="header-item">
+                <a href="mailto:info@devstudio.com" class="header-email link">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+          </address>
+          <ul class="header-soc-list list">
+            <li class="header-soc-item">
+              <a class="header-soc-link link" href="">
+                <svg class="header-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
               </a>
             </li>
-            <li class="header-item">
-              <a href="tel:+110001111111" class="header-commerce link">
-                +11 (000) 111-11-11
+            <li class="header-soc-item">
+              <a class="header-soc-link link" href="">
+                <svg class="header-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-soc-item">
+              <a class="header-soc-link link" href="">
+                <svg class="header-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header-soc-item">
+              <a class="header-soc-link link" href="">
+                <svg class="header-soc-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
               </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </header>
     <!-- Main -->
@@ -132,13 +183,28 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="work-list list">
             <li class="work-item">
-              <img src="./images/work-1.jpg" alt="computer" width="360" />
+              <img
+                srcset="./images/work1.jpg 1x, ./images/work1-2x.jpg 2x"
+                src="./images/work1.jpg"
+                alt="computer"
+                width="360"
+              />
             </li>
             <li class="work-item">
-              <img src="./images/work-2.jpg" alt="phones" width="360" />
+              <img
+                srcset="./images/work2.jpg 1x, ./images/work2-2x.jpg 2x"
+                src="./images/work2.jpg"
+                alt="phones"
+                width="360"
+              />
             </li>
             <li class="work-item">
-              <img src="./images/work-3.jpg" alt="phone" width="360" />
+              <img
+                srcset="./images/work3.jpg 1x, ./images/work3-2x.jpg 2x"
+                src="./images/work3.jpg"
+                alt="phone"
+                width="360"
+              />
             </li>
           </ul>
         </div>
@@ -151,8 +217,8 @@
           <ul class="team-list list">
             <li class="team-item">
               <img
-                class="team-img"
-                src="./images/team-1.jpg"
+                srcset="./images/team1.jpg 1x, ./images/team1-2x.jpg 2x"
+                src="./images/team1.jpg"
                 alt="Mark Guerrero"
                 width="264"
               />
@@ -193,8 +259,8 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
-                src="./images/team-2.jpg"
+                srcset="./images/team2.jpg 1x, ./images/team2-2x.jpg 2x"
+                src="./images/team2.jpg"
                 alt="Tom Ford"
                 width="264"
               />
@@ -235,8 +301,8 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
-                src="./images/team-3.jpg"
+                srcset="./images/team3.jpg 1x, ./images/team3-2x.jpg 2x"
+                src="./images/team3.jpg"
                 alt="Camila Garcia"
                 width="264"
               />
@@ -277,8 +343,8 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
-                src="./images/team-4.jpg"
+                srcset="./images/team4.jpg 1x, ./images/team4-2x.jpg 2x"
+                src="./images/team4.jpg"
                 alt="Daniel Wilson"
                 width="264"
               />
@@ -489,8 +555,7 @@
               class="modal-checkbox"
               type="checkbox"
               name="accept"
-              value="I accept the terms
-            and conditions of the Privacy Policy"
+              value="true"
             />
             <span class="checkbox-icon"></span>
             <svg class="click-icon" width="16" height="16">
