@@ -423,6 +423,7 @@ img {
   .nav {
     min-width: 1200px;
     gap: 76px;
+    justify-content: center;
   }
 
   .header-link {
@@ -433,7 +434,13 @@ img {
     padding-bottom: 28px;
   }
 
+  .js-menu-container {
+    gap: 332px;
+    align-items: center;
+  }
+
   .header-contact {
+    position: static;
     height: 24px;
     flex-direction: row;
     gap: 40px;
