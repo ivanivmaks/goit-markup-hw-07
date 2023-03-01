@@ -238,8 +238,23 @@ img {
   width: 100%;
   height: 100%;
   padding: 40px;
+  padding-top: 80px;
   background-color: var(--white);
   z-index: 2;
+  overflow-y: auto;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.js-menu-container > .close-btn {
+  position: fixed;
+  top: 40px;
+  right: 40px;
 }
 
 .header-list {
@@ -247,7 +262,7 @@ img {
   flex-direction: column;
   gap: 40px;
   margin-top: 16px;
-  margin-bottom: 268px;
+  margin-bottom: 40px;
 }
 
 .header-item {
@@ -421,7 +436,6 @@ img {
 
 @media screen and (min-width: 1200px) {
   .nav {
-    min-width: 1200px;
     gap: 76px;
     justify-content: center;
   }
@@ -434,7 +448,8 @@ img {
     padding-bottom: 28px;
   }
 
-  .js-menu-container {
+  .mobile-nav {
+    flex-direction: row;
     gap: 332px;
     align-items: center;
   }
