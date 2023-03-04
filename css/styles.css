@@ -532,7 +532,7 @@ img {
 }
 
 .hero-title {
-  width: 319px;
+  max-width: 319px;
   height: 80px;
   margin: 0 auto 72px;
   font-size: 36px;
@@ -566,6 +566,7 @@ img {
   }
 
   .hero-title {
+    width: 319px;
     font-size: 36px;
     line-height: 1.07;
     margin: 0 auto 40px;
@@ -599,6 +600,7 @@ img {
   }
 
   .hero-title {
+    max-width: none;
     width: 496px;
     height: 120px;
     font-size: 56px;
@@ -1070,7 +1072,7 @@ img {
 
 .footer-input {
   height: 40px;
-  width: 394px;
+  max-width: 394px;
   padding: 8px 16px;
   font-size: 12px;
   line-height: 2;
@@ -1191,7 +1193,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 392px;
+  max-width: 392px;
+  width: calc(100% - 36px);
   height: 584px;
   padding: 24px;
   background-color: #fff;
@@ -1201,6 +1204,12 @@ img {
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+  }
 }
 
 .backdrop.is-hidden .modal {
